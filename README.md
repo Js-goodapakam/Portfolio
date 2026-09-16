@@ -4,7 +4,7 @@
 
 ## 🚀 Live Demo
 
-🔗https://js-goodapakam.github.io/
+🔗[https://js-goodapakam.github.io](https://js-goodapakam.github.io/Portfolio/)/
 
 ---
 
