@@ -1,0 +1,424 @@
+/*==================================================
+                SERVICES SECTION
+==================================================*/
+
+#services{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+}
+
+/*==================================================
+                SERVICE GRID
+==================================================*/
+
+.service-list{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+/*==================================================
+                SERVICE CARD
+==================================================*/
+
+.service-card{
+
+    position:relative;
+
+    padding:40px 30px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--primary-light)
+    );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.4s;
+
+}
+
+.service-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+}
+
+/*==================================================
+                SERVICE ICON
+==================================================*/
+
+.service-card i{
+
+    width:75px;
+
+    height:75px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:rgba(79,140,255,.12);
+
+    color:var(--primary);
+
+    font-size:2.2rem;
+
+    margin-bottom:25px;
+
+    transition:.4s;
+
+}
+
+.service-card:hover i{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+/*==================================================
+                SERVICE TITLE
+==================================================*/
+
+.service-card h3{
+
+    font-size:1.45rem;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+.service-card p{
+
+    color:var(--text-light);
+
+    line-height:1.9;
+
+    font-size:.97rem;
+
+}
+
+/*==================================================
+                HOVER GLOW
+==================================================*/
+
+.service-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    right:-70px;
+
+    top:-70px;
+
+    border-radius:50%;
+
+    background:rgba(79,140,255,.08);
+
+    transition:.5s;
+
+}
+
+.service-card:hover::after{
+
+    transform:scale(1.35);
+
+}
+
+/*==================================================
+                FEATURED SERVICE CARD
+==================================================*/
+
+.service-card-featured{
+
+    border-color:rgba(79,140,255,.4);
+
+}
+
+.service-card-featured::before{
+
+    height:100%;
+
+    width:5px;
+
+    background:linear-gradient(
+        180deg,
+        var(--primary),
+        var(--primary-light)
+    );
+
+    transform:scaleY(1);
+
+    transform-origin:top;
+
+}
+
+.service-card-featured:hover::before{
+
+    transform:scaleY(1);
+
+}
+
+.service-card-featured i{
+
+    width:88px;
+
+    height:88px;
+
+    font-size:2.6rem;
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.service-card-featured h3{
+
+    font-size:1.6rem;
+
+}
+
+@media(min-width:992px){
+
+    .service-card-featured{
+
+        padding:48px 38px;
+
+    }
+
+}
+/*==================================================
+                CARD ANIMATION
+        (entrance handled by shared scroll-reveal
+         system in style.css / scripts/about.js)
+==================================================*/
+
+/*==================================================
+                SERVICE TITLE EFFECT
+==================================================*/
+
+.service-card h3{
+
+    transition:var(--transition);
+
+}
+
+.service-card:hover h3{
+
+    color:var(--primary);
+
+}
+
+/*==================================================
+                SERVICE TEXT EFFECT
+==================================================*/
+
+.service-card:hover p{
+
+    color:var(--text);
+
+}
+
+/*==================================================
+                TABLET RESPONSIVE
+==================================================*/
+
+@media(max-width:991px){
+
+    .service-list{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:25px;
+
+    }
+
+    .service-card{
+
+        padding:35px 25px;
+
+    }
+
+}
+
+/*==================================================
+                MOBILE RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .service-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .service-card{
+
+        padding:30px 24px;
+
+    }
+
+    .service-card i{
+
+        width:65px;
+
+        height:65px;
+
+        font-size:2rem;
+
+    }
+
+    .service-card-featured i{
+
+        width:65px;
+
+        height:65px;
+
+        font-size:2rem;
+
+    }
+
+    .service-card h3{
+
+        font-size:1.3rem;
+
+    }
+
+    .service-card-featured h3{
+
+        font-size:1.3rem;
+
+    }
+
+}
+
+/*==================================================
+                SMALL MOBILE
+==================================================*/
+
+@media(max-width:576px){
+
+    #services{
+
+        padding-bottom:40px;
+
+    }
+
+    .service-card{
+
+        padding:28px 20px;
+
+    }
+
+    .service-card i{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:1.8rem;
+
+        margin-bottom:20px;
+
+    }
+
+    .service-card h3{
+
+        font-size:1.2rem;
+
+    }
+
+    .service-card p{
+
+        font-size:.92rem;
+
+        line-height:1.8;
+
+    }
+
+}
+
+/*==================================================
+                LARGE SCREEN
+==================================================*/
+
+@media(min-width:1400px){
+
+    .service-list{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .service-card{
+
+        padding:45px 35px;
+
+    }
+
+}
+
+/*==================================================
+                SERVICES.CSS END
+==================================================*/

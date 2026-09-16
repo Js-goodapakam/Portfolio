@@ -1,0 +1,511 @@
+/*==================================================
+                CONTACT SECTION
+==================================================*/
+
+#contact{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+}
+
+/*==================================================
+                CONTACT WRAPPER
+==================================================*/
+
+.contact-wrapper{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:380px 1fr;
+
+    gap:40px;
+
+    align-items:flex-start;
+
+}
+
+/*==================================================
+                LEFT CONTACT INFO
+==================================================*/
+
+.contact-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/*==================================================
+                INFO CARD
+==================================================*/
+
+.info-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:28px;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.info-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:5px;
+
+    height:100%;
+
+    background:var(--primary);
+
+}
+
+.info-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/*==================================================
+                INFO ICON
+==================================================*/
+
+.info-box i{
+
+    width:65px;
+
+    height:65px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:rgba(79,140,255,.12);
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+    transition:var(--transition);
+
+}
+
+.info-box:hover i{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+/*==================================================
+                INFO TEXT
+==================================================*/
+
+.info-box h3{
+
+    font-size:1.2rem;
+
+    margin-bottom:8px;
+
+}
+
+.info-box p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+/*==================================================
+                CONTACT FORM
+==================================================*/
+
+.contact-form{
+
+    width:100%;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:35px;
+
+}
+
+/*==================================================
+                FORM
+==================================================*/
+
+.contact-form form{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+/*==================================================
+                INPUT BOX
+==================================================*/
+
+.input-box{
+
+    width:100%;
+
+}
+
+.input-box input,
+
+.input-box textarea{
+
+    width:100%;
+
+    padding:18px 20px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:var(--white);
+
+    font-size:1rem;
+
+    transition:var(--transition);
+
+}
+
+.input-box textarea{
+
+    resize:none;
+
+    min-height:180px;
+
+}
+
+/*==================================================
+                PLACEHOLDER
+==================================================*/
+
+.input-box input::placeholder,
+
+.input-box textarea::placeholder{
+
+    color:var(--text-light);
+
+}
+
+/*==================================================
+                FOCUS EFFECT
+==================================================*/
+
+.input-box input:focus,
+
+.input-box textarea:focus{
+
+    border-color:var(--primary);
+
+    background:rgba(79,140,255,.08);
+
+    box-shadow:0 0 0 4px rgba(79,140,255,.12);
+
+}
+
+/*==================================================
+                SUBMIT BUTTON
+==================================================*/
+
+.contact-form .btn{
+
+    width:220px;
+
+    margin-top:10px;
+
+}
+
+.contact-form .btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/*==================================================
+                FORM ANIMATION
+==================================================*/
+
+.contact-form{
+
+    animation:fadeUp .8s ease;
+
+}
+/*==================================================
+                TABLET RESPONSIVE
+==================================================*/
+
+@media(max-width:991px){
+
+    .contact-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+    .contact-info{
+
+        order:2;
+
+    }
+
+    .contact-form{
+
+        order:1;
+
+    }
+
+    .contact-form{
+
+        padding:30px;
+
+    }
+
+}
+
+/*==================================================
+                MOBILE RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .contact-wrapper{
+
+        gap:30px;
+
+    }
+
+    .info-box{
+
+        padding:22px;
+
+    }
+
+    .info-box i{
+
+        width:58px;
+
+        height:58px;
+
+        font-size:1.7rem;
+
+    }
+
+    .contact-form{
+
+        padding:25px;
+
+    }
+
+    .input-box input,
+
+    .input-box textarea{
+
+        padding:16px 18px;
+
+        font-size:.95rem;
+
+    }
+
+    .contact-form .btn{
+
+        width:100%;
+
+    }
+
+}
+
+/*==================================================
+                SMALL MOBILE
+==================================================*/
+
+@media(max-width:576px){
+
+    #contact{
+
+        padding-bottom:40px;
+
+    }
+
+    .info-box{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:16px;
+
+        padding:20px;
+
+    }
+
+    .info-box h3{
+
+        font-size:1.1rem;
+
+    }
+
+    .info-box p{
+
+        font-size:.9rem;
+
+        word-break:break-word;
+
+    }
+
+    .contact-form{
+
+        padding:20px;
+
+    }
+
+    .input-box input,
+
+    .input-box textarea{
+
+        border-radius:12px;
+
+        padding:15px 16px;
+
+    }
+
+    .input-box textarea{
+
+        min-height:150px;
+
+    }
+
+}
+
+/*==================================================
+                LARGE DESKTOP
+==================================================*/
+
+@media(min-width:1400px){
+
+    .contact-wrapper{
+
+        grid-template-columns:420px 1fr;
+
+        gap:50px;
+
+    }
+
+    .contact-form{
+
+        padding:40px;
+
+    }
+
+    .info-box{
+
+        padding:32px;
+
+    }
+
+}
+
+/*==================================================
+                CONTACT CARD ANIMATION
+==================================================*/
+
+.info-box{
+
+    opacity:0;
+
+    animation:contactFade .8s ease forwards;
+
+}
+
+.info-box:nth-child(1){
+
+    animation-delay:.1s;
+
+}
+
+.info-box:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.info-box:nth-child(3){
+
+    animation-delay:.3s;
+
+}
+
+@keyframes contactFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+                CONTACT.CSS END
+==================================================*/

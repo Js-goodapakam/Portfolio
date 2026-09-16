@@ -1,0 +1,1112 @@
+/*==================================================
+                ABOUT SECTION
+==================================================*/
+
+.about-container{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+}
+
+/*==================================================
+                LEFT SIDEBAR
+==================================================*/
+
+.about-sidebar{
+
+    background:linear-gradient(135deg,#111C31,#182848);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    position:sticky;
+
+    top:110px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.about-image{
+
+    width:180px;
+
+    height:180px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:5px solid #4F8CFF;
+
+    margin-bottom:20px;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.about-sidebar h2{
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+
+}
+
+.about-sidebar h4{
+
+    color:#4F8CFF;
+
+    font-size:1rem;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+}
+
+.about-sidebar p{
+
+    color:#cfd6e4;
+
+    line-height:1.8;
+
+    font-size:.95rem;
+
+    margin-bottom:25px;
+
+}
+
+/*==================================================
+                INFO BOX
+==================================================*/
+
+.about-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.info-item{
+
+    background:linear-gradient(135deg,#172540,#1E3157);
+
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    text-align:left;
+
+    transition:.3s;
+
+}
+
+.info-item:hover{
+
+    transform:translateX(8px);
+
+    background:#203150;
+
+}
+
+.info-item span{
+
+    display:block;
+
+    color:#8fa8d6;
+
+    font-size:.88rem;
+
+}
+
+.info-item strong{
+
+    color:#fff;
+
+    font-size:1rem;
+
+}
+
+/*==================================================
+                RIGHT CONTENT
+==================================================*/
+
+.about-main{
+
+    background:linear-gradient(135deg,#111C31,#182848);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+/*==================================================
+                TABS
+==================================================*/
+
+.about-tabs{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+
+}
+
+.tab{
+
+    border:none;
+
+    outline:none;
+
+    background:#172540;
+
+    color:#d7d7d7;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+}
+
+.tab:hover{
+
+    background:#2b4470;
+
+    color:#fff;
+
+}
+
+.tab.active{
+
+    background:#4F8CFF;
+
+    color:#fff;
+
+    box-shadow:0 8px 20px rgba(79,140,255,.35);
+
+}
+
+/*==================================================
+                TAB CONTENT
+==================================================*/
+
+.tab-content{
+
+    display:none;
+
+    animation:fadeAbout .5s ease;
+
+}
+
+.tab-content.active{
+
+    display:block;
+
+}
+
+.tab-heading{
+
+    margin-bottom:30px;
+
+}
+
+.tab-heading h2{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.tab-heading span{
+
+    color:#4F8CFF;
+
+}
+
+.tab-heading p{
+
+    color:#b8c3d8;
+
+    line-height:1.8;
+
+}
+
+/*==================================================
+                ANIMATION
+==================================================*/
+
+@keyframes fadeAbout{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==================================================
+                TIMELINE
+==================================================*/
+
+.timeline{
+
+    position:relative;
+
+    margin-top:20px;
+
+    padding-left:35px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:12px;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:#4F8CFF;
+
+    border-radius:10px;
+
+}
+
+.timeline-card{
+
+    position:relative;
+
+    background:linear-gradient(135deg,#172540,#1E3157);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+    transition:.35s;
+
+}
+
+.timeline-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-31px;
+
+    top:32px;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#4F8CFF;
+
+    border:4px solid #08111F;
+
+    box-shadow:0 0 0 4px rgba(79,140,255,.20);
+
+}
+
+.timeline-card:hover{
+
+    transform:translateY(-8px) scale(1.015);
+
+    background:linear-gradient(135deg,#203150,#243a63);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+.timeline-year{
+
+    display:inline-block;
+
+    background:#4F8CFF;
+
+    color:#fff;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.timeline-content h3{
+
+    font-size:1.35rem;
+
+    margin-bottom:8px;
+
+    color:#fff;
+
+}
+
+.timeline-content h4{
+
+    color:#7fb2ff;
+
+    font-size:1rem;
+
+    margin-bottom:14px;
+
+    font-weight:600;
+
+}
+
+.timeline-content p{
+
+    color:#cfd6e4;
+
+    line-height:1.8;
+
+}
+
+/*==================================================
+                TIMELINE COMPANY LOGO
+==================================================*/
+
+.timeline-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:14px;
+
+}
+
+.timeline-heading h3{
+
+    margin-bottom:4px;
+
+}
+
+.timeline-heading h4{
+
+    margin-bottom:0;
+
+}
+
+.timeline-logo{
+
+    width:42px;
+
+    height:42px;
+
+    object-fit:contain;
+
+    padding:6px;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    flex-shrink:0;
+
+}
+
+/*==================================================
+                TIMELINE ZIG-ZAG (DESKTOP)
+==================================================*/
+
+@media(min-width:900px){
+
+    .timeline{
+
+        padding-left:0;
+
+        display:grid;
+
+        grid-template-columns:1fr 70px 1fr;
+
+    }
+
+    .timeline::before{
+
+        left:50%;
+
+        transform:translateX(-50%);
+
+    }
+
+    .timeline-card{
+
+        grid-column:1 / span 1;
+
+        max-width:100%;
+
+    }
+
+    .timeline-card:nth-child(odd){
+
+        grid-column:1 / 2;
+
+    }
+
+    .timeline-card:nth-child(even){
+
+        grid-column:3 / 4;
+
+    }
+
+    .timeline-card::before{
+
+        top:50%;
+
+        transform:translateY(-50%);
+
+    }
+
+    .timeline-card:nth-child(odd)::before{
+
+        left:auto;
+
+        right:-44px;
+
+    }
+
+    .timeline-card:nth-child(even)::before{
+
+        left:-44px;
+
+    }
+
+}
+
+/*==================================================
+                TIMELINE ANIMATION
+        (entrance handled by shared scroll-reveal
+         system in style.css / scripts/about.js)
+==================================================*/
+/*==================================================
+                SKILL CATEGORY
+==================================================*/
+
+.skill-category{
+
+    margin:35px 0 18px;
+
+    font-size:1.35rem;
+
+    color:#4F8CFF;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+/*==================================================
+                SKILL GRID
+==================================================*/
+
+.skill-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+
+    gap:22px;
+
+    margin-bottom:35px;
+
+}
+
+/*==================================================
+                SKILL CARD
+==================================================*/
+
+.skill-card{
+
+    background:linear-gradient(135deg,#172540,#1E3157);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:25px 20px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.skill-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(79,140,255,.15),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.skill-card:hover::before{
+
+    opacity:1;
+
+}
+
+.skill-card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+    border-color:#4F8CFF;
+
+    box-shadow:0 15px 35px rgba(79,140,255,.25);
+
+}
+
+/*==================================================
+                SKILL ICON
+==================================================*/
+
+.skill-icon{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    margin-bottom:18px;
+
+    border-radius:50%;
+
+    background:rgba(79,140,255,.12);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.35s;
+
+}
+
+.skill-card:hover .skill-icon{
+
+    background:rgba(79,140,255,.22);
+
+}
+
+/*==================================================
+                SKILL IMAGE
+==================================================*/
+
+.skill-card img{
+
+    width:42px;
+
+    height:42px;
+
+    object-fit:contain;
+
+    transition:.35s;
+
+}
+
+.skill-card:hover img{
+
+    transform:scale(1.12) rotate(5deg);
+
+}
+
+/*==================================================
+                SKILL TITLE
+==================================================*/
+
+.skill-card h4{
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    margin-top:10px;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .skill-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .skill-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/*==================================================*
+        CERTIFICATE GALLERY
+*==================================================*/
+
+.certificate-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+    margin-top:25px;
+
+    align-items:stretch;
+
+}
+
+
+/*==================================================*
+        CERTIFICATE CARD
+*==================================================*/
+
+.certificate-card{
+
+    background:linear-gradient(135deg,#172540,#1E3157);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+
+/*==================================================*
+        HOVER
+*==================================================*/
+
+.certificate-card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+    border-color:#4F8CFF;
+
+    box-shadow:0 18px 40px rgba(79,140,255,.25);
+
+}
+
+
+/*==================================================*
+        CERTIFICATE IMAGE
+*==================================================*/
+
+.certificate-card img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+    display:block;
+
+    background:#fff;
+
+}
+
+
+.certificate-card:hover img{
+
+    transform:scale(1.06);
+
+}
+
+
+/*==================================================*
+        CERTIFICATE TITLE
+*==================================================*/
+
+.certificate-card h4{
+
+    margin:0;
+
+    padding:18px 18px 8px;
+
+    color:#fff;
+
+    text-align:left;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    line-height:1.4;
+
+    min-height:72px;
+
+}
+
+
+/*==================================================*
+        CERTIFICATE DESCRIPTION
+*==================================================*/
+
+.certificate-card p{
+
+    margin:0;
+
+    padding:0 18px 10px;
+
+    color:#c7d2e1;
+
+    text-align:left;
+
+    font-size:.9rem;
+
+    line-height:1.5;
+
+    min-height:45px;
+
+}
+
+
+/*==================================================*
+        VIEW CREDENTIAL
+*==================================================*/
+
+.certificate-card a{
+
+    margin-top:auto;
+
+    margin-left:18px;
+
+    margin-right:18px;
+
+    margin-bottom:18px;
+
+    color:#4F8CFF;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:5px;
+
+}
+
+
+.certificate-card a:hover{
+
+    color:#fff;
+
+    text-decoration:underline;
+
+}
+
+
+/*==================================================*
+        RESPONSIVE
+*==================================================*/
+
+@media(max-width:768px){
+
+    .certificate-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .certificate-card img{
+
+        height:auto;
+
+        max-height:300px;
+
+        object-fit:contain;
+
+    }
+
+}/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:1100px){
+
+    .about-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .about-sidebar{
+
+        position:relative;
+
+        top:0;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .about-main{
+
+        padding:25px;
+
+    }
+
+    .about-sidebar{
+
+        padding:25px;
+
+    }
+
+    .about-tabs{
+
+        justify-content:center;
+
+    }
+
+    .tab{
+
+        width:100%;
+
+    }
+
+    .timeline{
+
+        padding-left:25px;
+
+    }
+
+    .timeline::before{
+
+        left:8px;
+
+    }
+
+    .timeline-card::before{
+
+        left:-25px;
+
+    }
+
+    .timeline-logo{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+    .about-image{
+
+        width:150px;
+
+        height:150px;
+
+    }
+
+    .certificate-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .about-main{
+
+        padding:18px;
+
+    }
+
+    .about-sidebar{
+
+        padding:20px;
+
+    }
+
+    .about-sidebar h2{
+
+        font-size:1.6rem;
+
+    }
+
+    .tab-heading h2{
+
+        font-size:1.6rem;
+
+    }
+
+    .timeline-content h3{
+
+        font-size:1.1rem;
+
+    }
+
+    .timeline-content h4{
+
+        font-size:.95rem;
+
+    }
+
+    .certificate-card img{
+
+        height:160px;
+
+    }
+
+}
+
+/*==================================================
+            SMOOTH ANIMATIONS
+==================================================*/
+
+.about-sidebar,
+.about-main{
+
+    animation:aboutFade .8s ease;
+
+}
+
+@keyframes aboutFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

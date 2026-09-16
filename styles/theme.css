@@ -1,0 +1,325 @@
+/*==================================================
+            LIGHT / DARK MODE TOGGLE
+==================================================*/
+
+.menu-area{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+}
+
+.theme-switch-wrapper{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.theme-switch-wrapper input{
+
+    display:none;
+
+}
+
+.theme-toggle-label{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    width:56px;
+
+    height:28px;
+
+    padding:0 6px;
+
+    border-radius:30px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.theme-toggle-label i{
+
+    font-size:1rem;
+
+    line-height:1;
+
+    z-index:1;
+
+    color:var(--text-light);
+
+}
+
+.toggle-ball{
+
+    position:absolute;
+
+    top:2px;
+
+    left:2px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    transition:.35s ease;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
+
+}
+
+#theme-toggle:checked ~ .theme-toggle-label .toggle-ball{
+
+    transform:translateX(28px);
+
+}
+
+/*==================================================
+        LIGHT THEME — CORE VARIABLES
+    (overrides the :root defaults in style.css)
+==================================================*/
+
+[data-theme="light"]{
+
+    --primary:#2E6EF5;
+
+    --primary-light:#5B8DFF;
+
+    --secondary:#EEF2F8;
+
+    --background:#F5F7FB;
+
+    --background-light:#FFFFFF;
+
+    --card:#FFFFFF;
+
+    --card-hover:#EEF3FB;
+
+    --white:#0B1526;
+
+    --text:#3A4A63;
+
+    --text-light:#64748B;
+
+    --border:rgba(15,23,42,.10);
+
+    --shadow:0 15px 40px rgba(15,23,42,.08);
+
+    --card-alt:#E9EFFB;
+
+}
+
+/*==================================================
+        LIGHT THEME — ABOUT / EXPERIENCE /
+        EDUCATION / SKILLS / ACHIEVEMENTS
+    (about.css uses hardcoded hex colors instead of
+     variables, so it needs explicit overrides here)
+==================================================*/
+
+[data-theme="light"] .about-sidebar,
+[data-theme="light"] .about-main{
+
+    background:#FFFFFF;
+
+    border-color:rgba(15,23,42,.08);
+
+    box-shadow:0 15px 35px rgba(15,23,42,.06);
+
+}
+
+[data-theme="light"] .about-sidebar p{
+
+    color:#4B5A73;
+
+}
+
+[data-theme="light"] .info-item{
+
+    background:#F1F5FB;
+
+}
+
+[data-theme="light"] .info-item:hover{
+
+    background:#E4ECF9;
+
+}
+
+[data-theme="light"] .info-item span{
+
+    color:#64748B;
+
+}
+
+[data-theme="light"] .info-item strong{
+
+    color:#12233F;
+
+}
+
+[data-theme="light"] .tab{
+
+    background:#F1F5FB;
+
+    color:#3A4A63;
+
+}
+
+[data-theme="light"] .tab:hover{
+
+    background:#DCE7FA;
+
+    color:#12233F;
+
+}
+
+[data-theme="light"] .tab.active{
+
+    background:#2E6EF5;
+
+    color:#fff;
+
+}
+
+[data-theme="light"] .tab-heading p{
+
+    color:#4B5A73;
+
+}
+
+[data-theme="light"] .timeline-card{
+
+    background:#F1F5FB;
+
+    border-color:rgba(15,23,42,.08);
+
+}
+
+[data-theme="light"] .timeline-card:hover{
+
+    background:#E4ECF9;
+
+    box-shadow:0 15px 35px rgba(15,23,42,.10);
+
+}
+
+[data-theme="light"] .timeline-card::before{
+
+    border-color:#F5F7FB;
+
+}
+
+[data-theme="light"] .timeline-content h3{
+
+    color:#12233F;
+
+}
+
+[data-theme="light"] .timeline-content h4{
+
+    color:#2E6EF5;
+
+}
+
+[data-theme="light"] .timeline-content p{
+
+    color:#4B5A73;
+
+}
+
+[data-theme="light"] .skill-card,
+[data-theme="light"] .certificate-card{
+
+    background:#F1F5FB;
+
+    border-color:rgba(15,23,42,.08);
+
+}
+
+[data-theme="light"] .skill-card h4,
+[data-theme="light"] .certificate-card h4{
+
+    color:#12233F;
+
+}
+
+[data-theme="light"] .certificate-card p{
+
+    color:#4B5A73;
+
+}
+
+[data-theme="light"] .certificate-card a:hover{
+
+    color:#12233F;
+
+}
+
+[data-theme="light"] .stat-card span{
+
+    color:#4B5A73;
+
+}
+
+[data-theme="light"] .details h1{
+
+    background:linear-gradient(
+        90deg,
+        #0B1526,
+        #1F3B73,
+        #2E6EF5
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+[data-theme="light"] header{
+
+    background:rgba(255,255,255,.88);
+
+    border-bottom-color:rgba(15,23,42,.08);
+
+}
+
+/*==================================================
+        SMOOTH THEME TRANSITION
+==================================================*/
+
+body,
+header,
+.about-sidebar,
+.about-main,
+.info-item,
+.tab,
+.timeline-card,
+.skill-card,
+.certificate-card,
+.service-card,
+.project-card{
+
+    transition:background .35s ease, color .35s ease, border-color .35s ease;
+
+}

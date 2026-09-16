@@ -1,0 +1,485 @@
+/*==================================================
+                PROJECTS SECTION
+==================================================*/
+
+#projects{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+}
+
+/*==================================================
+                PROJECT GRID
+==================================================*/
+
+.project-container{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+}
+
+/*==================================================
+                PROJECT CARD
+==================================================*/
+
+.project-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:var(--radius);
+
+    background:linear-gradient(135deg,var(--card),var(--card-alt));
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-12px) scale(1.015);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
+
+    background:linear-gradient(135deg,var(--card-hover),var(--card-alt));
+
+}
+
+/*==================================================*
+* PROJECT IMAGE *
+*==================================================*/
+
+.project-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    padding: 20px 50px;
+    display: block;
+    box-sizing: border-box;
+    transition: .6s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.04);
+}
+
+/*==================================================
+                IMAGE OVERLAY
+==================================================*/
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:230px;
+
+    background:linear-gradient(
+        to top,
+        rgba(8,17,31,.05),
+        rgba(8,17,31,.55)
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:1;
+
+
+}
+
+.project-card:hover::before{
+
+    opacity:1;
+
+}
+
+/*==================================================
+                PROJECT CONTENT
+==================================================*/
+
+.project-info{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:28px;
+
+}
+
+.project-info h3{
+
+    font-size:1.45rem;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+}
+
+.project-card:hover h3{
+
+    color:var(--primary);
+
+}
+
+.project-info p{
+
+    color:var(--text-light);
+
+    line-height:1.9;
+
+    margin-bottom:22px;
+
+}
+/*==================================================
+                TECHNOLOGY TAGS
+==================================================*/
+
+.project-tech{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:28px;
+
+}
+
+/*==================================================
+                ACHIEVEMENT STAT HIGHLIGHT
+==================================================*/
+
+.achievement-stat-card{
+
+    border-color:rgba(79,140,255,.3);
+
+}
+
+.stat-highlight{
+
+    margin-bottom:20px;
+
+    padding-bottom:18px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.stat-number{
+
+    display:block;
+
+    font-family:var(--font-display);
+
+    font-size:2.6rem;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    color:var(--primary);
+
+    letter-spacing:-.02em;
+}
+
+.stat-caption{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:var(--text-light);
+
+    font-size:.9rem;
+
+}
+
+.project-tech span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(79,140,255,.12);
+
+    color:var(--primary);
+
+    font-size:.88rem;
+
+    font-weight:600;
+
+    border:1px solid rgba(79,140,255,.25);
+
+    transition:var(--transition);
+
+}
+
+.project-tech span:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateY(-3px);
+
+}
+
+/*==================================================
+                PROJECT GLOW EFFECT
+==================================================*/
+
+.project-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    top:-120px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:rgba(79,140,255,.08);
+
+    transition:.5s;
+
+    pointer-events:none;
+
+}
+
+.project-card:hover::after{
+
+    transform:scale(1.4);
+
+}
+
+/*==================================================
+                PROJECT ENTRY ANIMATION
+        (entrance handled by shared scroll-reveal
+         system in style.css / scripts/about.js)
+==================================================*/
+/*==================================================
+                TABLET RESPONSIVE
+==================================================*/
+
+@media(max-width:991px){
+
+    .project-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:28px;
+
+    }
+
+    .project-info{
+
+        padding:24px;
+
+    }
+
+    .project-card img{
+
+        height:210px;
+
+    }
+
+    .project-card::before{
+
+        height:210px;
+
+    }
+
+}
+
+/*==================================================
+                MOBILE RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .project-container{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .project-card img{
+
+        height:220px;
+
+    }
+
+    .project-card::before{
+
+        height:220px;
+
+    }
+
+    .project-info{
+
+        padding:22px;
+
+    }
+
+    .project-info h3{
+
+        font-size:1.3rem;
+
+    }
+
+}
+
+/*==================================================
+                SMALL MOBILE
+==================================================*/
+
+@media(max-width:576px){
+
+    #projects{
+
+        padding-bottom:40px;
+
+    }
+
+    .project-card img{
+
+        height:190px;
+
+    }
+
+    .project-card::before{
+
+        height:190px;
+
+    }
+
+    .project-info{
+
+        padding:20px;
+
+    }
+
+    .project-info h3{
+
+        font-size:1.2rem;
+
+    }
+
+    .project-info p{
+
+        font-size:.92rem;
+
+        line-height:1.8;
+
+    }
+
+    .project-tech{
+
+        gap:10px;
+
+    }
+
+    .project-tech span{
+
+        font-size:.8rem;
+
+        padding:7px 14px;
+
+    }
+
+}
+
+/*==================================================
+                LARGE DESKTOP
+==================================================*/
+
+@media(min-width:1400px){
+
+    .project-container{
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:35px;
+
+    }
+
+    .project-card img{
+
+        height:240px;
+
+    }
+
+    .project-card::before{
+
+        height:240px;
+
+    }
+
+    .project-info{
+
+        padding:30px;
+
+    }
+
+}
+
+/*==================================================
+                PROJECT IMAGE LOADING
+==================================================*/
+
+.project-card img{
+
+    background:var(--background-light);
+
+}
+
+/*==================================================
+                PROJECTS.CSS END
+==================================================*/
